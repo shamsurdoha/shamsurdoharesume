@@ -3,161 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Business Name - Landing Page</title>
-    <!-- Tailwind CSS CDN -->
+    <title>Your Name - Resume</title>
+    <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Inter Font from Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8fafc; /* Light blue-gray background */
+            background-color: #f3f4f6; /* Light gray background */
+            color: #333;
+            line-height: 1.6;
         }
-        /* Custom scrollbar for better aesthetics */
-        ::-webkit-scrollbar {
-            width: 8px;
+        .container {
+            max-width: 960px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #ffffff; /* White background for the resume content */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            border-radius: 0.75rem; /* Rounded corners */
         }
-        ::-webkit-scrollbar-track {
-            background: #e2e8f0;
-            border-radius: 10px;
+        h1, h2, h3 {
+            color: #1a202c; /* Darker heading color */
+            font-weight: 600;
         }
-        ::-webkit-scrollbar-thumb {
-            background: #94a3b8;
-            border-radius: 10px;
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
         }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #64748b;
+        h2 {
+            font-size: 1.75rem;
+            border-bottom: 2px solid #e2e8f0; /* Light gray border under sections */
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        .contact-info a {
+            color: #4299e1; /* Blue link color */
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .contact-info a:hover {
+            color: #2b6cb0; /* Darker blue on hover */
+        }
+        .section-content {
+            margin-bottom: 1.5rem;
+        }
+        .job-title {
+            font-weight: 600;
+            color: #2d3748; /* Slightly darker text for job titles */
+        }
+        .company-name {
+            font-style: italic;
+            color: #4a5568; /* Grayer text for company names */
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                margin: 1rem;
+                padding: 1rem;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+            h3 {
+                font-size: 1.1rem;
+            }
         }
     </style>
 </head>
-<body class="antialiased text-gray-800">
-
-    <!-- Navigation Bar -->
-    <nav class="bg-white shadow-md py-4">
-        <div class="container mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8">
-            <a href="#" class="text-2xl font-bold text-gray-900">YourBusiness</a>
-            <div class="hidden md:flex space-x-8">
-                <a href="#features" class="text-gray-600 hover:text-blue-600 transition duration-300 ease-in-out">Features</a>
-                <a href="#about" class="text-gray-600 hover:text-blue-600 transition duration-300 ease-in-out">About Us</a>
-                <a href="#testimonials" class="text-gray-600 hover:text-blue-600 transition duration-300 ease-in-out">Testimonials</a>
-                <a href="#contact" class="text-gray-600 hover:text-blue-600 transition duration-300 ease-in-out">Contact</a>
+<body class="antialiased">
+    <div class="container">
+        <!-- Header Section -->
+        <header class="text-center pb-4 border-b border-gray-200">
+            <h1 class="text-gray-900">Your Name Here</h1>
+            <p class="text-xl text-gray-600 mb-2">Your Professional Title</p>
+            <div class="contact-info text-gray-700 text-sm flex flex-wrap justify-center gap-x-4 gap-y-1">
+                <p>Email: <a href="mailto:your.email@example.com" class="hover:underline">your.email@example.com</a></p>
+                <p>Phone: (123) 456-7890</p>
+                <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank" class="hover:underline">linkedin.com/in/yourprofile</a></p>
+                <p>GitHub: <a href="https://github.com/yourusername" target="_blank" class="hover:underline">github.com/yourusername</a></p>
             </div>
-            <a href="#cta" class="hidden md:block bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition duration-300 ease-in-out shadow-lg">Get Started</a>
-            <!-- Mobile Menu Button -->
-            <button class="md:hidden text-gray-600 hover:text-gray-900 focus:outline-none focus:text-gray-900">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
-        </div>
-    </nav>
+        </header>
 
-    <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20 sm:py-24 lg:py-32 text-center rounded-b-3xl shadow-xl">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
-                Revolutionize Your Business with Our Solution
-            </h1>
-            <p class="text-lg sm:text-xl lg:text-2xl mb-10 max-w-3xl mx-auto opacity-90">
-                We provide innovative tools and services to help your business grow, succeed, and stand out in the market.
+        <!-- Summary Section -->
+        <section class="section-content">
+            <h2>Summary</h2>
+            <p class="text-gray-700">
+                Highly motivated and results-oriented professional with X years of experience in [Your Industry/Field].
+                Adept at [Skill 1], [Skill 2], and [Skill 3]. Seeking to leverage expertise in [Your Area] to contribute
+                to a dynamic team and achieve organizational goals. Proven ability to adapt quickly to new technologies
+                and environments.
             </p>
-            <a href="#cta" class="bg-white text-blue-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition duration-300 ease-in-out shadow-lg transform hover:scale-105">
-                Learn More
-            </a>
-        </div>
-    </section>
+        </section>
 
-    <!-- Features Section -->
-    <section id="features" class="py-16 sm:py-20 lg:py-24 bg-white">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-12">Key Features</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
-                <div class="bg-gray-50 p-6 rounded-xl shadow-md text-center transform hover:scale-105 transition duration-300 ease-in-out">
-                    <div class="mb-4 text-blue-600">
-                        <svg class="w-12 h-12 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Advanced Analytics</h3>
-                    <p class="text-gray-600">Gain deep insights into your business performance with our powerful analytics tools.</p>
-                </div>
-                <!-- Feature 2 -->
-                <div class="bg-gray-50 p-6 rounded-xl shadow-md text-center transform hover:scale-105 transition duration-300 ease-in-out">
-                    <div class="mb-4 text-blue-600">
-                        <svg class="w-12 h-12 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM13 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2h-2zM13 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2h-2z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Seamless Integration</h3>
-                    <p class="text-gray-600">Easily connect with your existing tools and workflows for a smooth transition.</p>
-                </div>
-                <!-- Feature 3 -->
-                <div class="bg-gray-50 p-6 rounded-xl shadow-md text-center transform hover:scale-105 transition duration-300 ease-in-out">
-                    <div class="mb-4 text-blue-600">
-                        <svg class="w-12 h-12 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9.293 12.293a1 1 0 001.414 1.414L12 11.414l1.293 1.293a1 1 0 001.414-1.414L13.414 10l1.293-1.293a1 1 0 00-1.414-1.414L12 8.586l-1.293-1.293a1 1 0 00-1.414 1.414L10.586 10l-1.293 1.293z" clip-rule="evenodd"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">24/7 Support</h3>
-                    <p class="text-gray-600">Our dedicated support team is always ready to assist you, day or night.</p>
-                </div>
+        <!-- Experience Section -->
+        <section class="section-content">
+            <h2>Experience</h2>
+            <div class="mb-4">
+                <h3 class="job-title">Senior Software Engineer</h3>
+                <p class="company-name">Tech Solutions Inc. | City, State</p>
+                <p class="text-sm text-gray-500 mb-2">January 2022 – Present</p>
+                <ul class="list-disc pl-5 text-gray-700">
+                    <li>Developed and maintained scalable web applications using React and Node.js, improving performance by 20%.</li>
+                    <li>Led a team of 3 junior developers, providing mentorship and code reviews.</li>
+                    <li>Implemented new API endpoints, reducing data retrieval time by 15%.</li>
+                    <li>Collaborated with product managers to define requirements and deliver features on time.</li>
+                </ul>
             </div>
-        </div>
-    </section>
-
-    <!-- About Us Section -->
-    <section id="about" class="py-16 sm:py-20 lg:py-24 bg-gray-100">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12">
-            <div class="md:w-1/2">
-                <img src="https://placehold.co/600x400/e0f2fe/0369a1?text=About+Us+Image" alt="About Us" class="rounded-xl shadow-lg w-full h-auto object-cover">
+            <div class="mb-4">
+                <h3 class="job-title">Junior Developer</h3>
+                <p class="company-name">Innovative Systems | City, State</p>
+                <p class="text-sm text-gray-500 mb-2">June 2019 – December 2021</p>
+                <ul class="list-disc pl-5 text-gray-700">
+                    <li>Contributed to the development of front-end components using HTML, CSS, and JavaScript.</li>
+                    <li>Assisted in debugging and testing software applications.</li>
+                    <li>Participated in daily stand-ups and sprint planning meetings.</li>
+                </ul>
             </div>
-            <div class="md:w-1/2 text-center md:text-left">
-                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">About Our Company</h2>
-                <p class="text-gray-700 leading-relaxed mb-6">
-                    At **YourBusiness**, we are passionate about empowering businesses of all sizes to achieve their full potential. Founded in [Year], our mission has been to deliver cutting-edge solutions that simplify complex processes and drive tangible results. We believe in innovation, customer-centricity, and building lasting partnerships.
-                </p>
-                <p class="text-gray-700 leading-relaxed">
-                    Our team of experts is committed to providing exceptional service and support, ensuring that you have everything you need to succeed in today's competitive landscape.
-                </p>
+        </section>
+
+        <!-- Education Section -->
+        <section class="section-content">
+            <h2>Education</h2>
+            <div class="mb-4">
+                <h3 class="job-title">Master of Science in Computer Science</h3>
+                <p class="company-name">University of Technology | City, State</p>
+                <p class="text-sm text-gray-500 mb-2">September 2018 – May 2020</p>
+                <p class="text-gray-700">Relevant Coursework: Data Structures, Algorithms, Machine Learning, Web Development</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="py-16 sm:py-20 lg:py-24 bg-white">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-12">What Our Clients Say</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Testimonial 1 -->
-                <div class="bg-gray-50 p-6 rounded-xl shadow-md">
-                    <p class="text-lg text-gray-700 italic mb-4">"YourBusiness has transformed the way we operate. Their solution is intuitive, powerful, and has significantly boosted our efficiency. Highly recommended!"</p>
-                    <p class="font-semibold text-gray-900">- Jane Doe, CEO of Company A</p>
-                </div>
-                <!-- Testimonial 2 -->
-                <div class="bg-gray-50 p-6 rounded-xl shadow-md">
-                    <p class="text-lg text-gray-700 italic mb-4">"The support team is incredible! They are always quick to respond and incredibly helpful. We couldn't be happier with the results."</p>
-                    <p class="font-semibold text-gray-900">- John Smith, Marketing Director at Company B</p>
-                </div>
+            <div class="mb-4">
+                <h3 class="job-title">Bachelor of Science in Information Technology</h3>
+                <p class="company-name">State University | City, State</p>
+                <p class="text-sm text-gray-500 mb-2">September 2014 – May 2018</p>
+                <p class="text-gray-700">Graduated with Honors</p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Call to Action Section -->
-    <section id="cta" class="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-16 sm:py-20 lg:py-24 text-center rounded-t-3xl shadow-xl">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-6">Ready to Get Started?</h2>
-            <p class="text-lg sm:text-xl mb-10 max-w-2xl mx-auto opacity-90">
-                Join countless businesses already experiencing success with YourBusiness. Contact us today for a free consultation!
-            </p>
-            <a href="mailto:info@yourbusiness.com" class="bg-white text-purple-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition duration-300 ease-in-out shadow-lg transform hover:scale-105">
-                Contact Us
-            </a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-300 py-10">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p>&copy; 2025 Your Business Name. All rights reserved.</p>
-            <div class="flex justify-center space-x-6 mt-4">
-                <a href="#" class="hover:text-white transition duration-300 ease-in-out">Privacy Policy</a>
-                <a href="#" class="hover:text-white transition duration-300 ease-in-out">Terms of Service</a>
+        <!-- Skills Section -->
+        <section class="section-content">
+            <h2>Skills</h2>
+            <div class="flex flex-wrap gap-2 text-gray-700">
+                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">JavaScript</span>
+                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">React</span>
+                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Node.js</span>
+                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Python</span>
+                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">HTML5</span>
+                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">CSS3</span>
+                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Tailwind CSS</span>
+                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Git</span>
+                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">SQL</span>
+                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Agile Methodologies</span>
+                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Problem Solving</span>
+                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Communication</span>
             </div>
-        </div>
-    </footer>
+        </section>
 
+        <!-- Projects Section (Optional) -->
+        <section class="section-content">
+            <h2>Projects</h2>
+            <div class="mb-4">
+                <h3 class="job-title">E-commerce Platform</h3>
+                <p class="text-sm text-gray-500 mb-2">Technologies: React, Redux, Express.js, MongoDB</p>
+                <ul class="list-disc pl-5 text-gray-700">
+                    <li>Developed a full-stack e-commerce application with user authentication, product catalog, and shopping cart functionality.</li>
+                    <li>Implemented secure payment gateway integration.</li>
+                    <li><a href="https://github.com/yourusername/ecommerce-project" target="_blank" class="text-blue-500 hover:underline">View on GitHub</a></li>
+                </ul>
+            </div>
+            <div class="mb-4">
+                <h3 class="job-title">Personal Portfolio Website</h3>
+                <p class="text-sm text-gray-500 mb-2">Technologies: HTML, CSS, JavaScript, GSAP</p>
+                <ul class="list-disc pl-5 text-gray-700">
+                    <li>Designed and built a responsive personal portfolio site to showcase projects and skills.</li>
+                    <li>Incorporated smooth scrolling and interactive animations.</li>
+                    <li><a href="https://github.com/yourusername/portfolio-website" target="_blank" class="text-blue-500 hover:underline">View on GitHub</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer class="text-center text-gray-500 text-sm pt-4 border-t border-gray-200 mt-4">
+            <p>&copy; 2025 Your Name. All rights reserved.</p>
+        </footer>
+    </div>
 </body>
 </html>
